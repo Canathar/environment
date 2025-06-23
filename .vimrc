@@ -243,9 +243,20 @@ call plug#end()
    " (For Normal/Visual/Select/Operator-pending Modes)
    noremap <leader>x y:tabnew<CR>:r! <C-R>"<CR>
 
+
+
+" =================================================================================================================================
+" --                                                  Terminal Functionality                                                     --
+" =================================================================================================================================
+" --                                                                                                                             --
+" --   see:  :help terminal                                                                                                      --
+" --                                                                                                                             --
+" =================================================================================================================================
+
+   " Terminal paste
    " Highlight from the cursor to the end of the line, yank the text and paste into terminal
-   " (Start in Normal Mode, Enter Visual Mode)
-   " NOTE: This macro ONLY works with VIM8
+   " NOTE: A Terminal MUST be open (This macro ONLY works with VIM8 and above)
+   " (For Normal Mode)
    noremap <leader>v <C-V>$y<C-W><C-W><C-W>""
 
 
