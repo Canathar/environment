@@ -129,9 +129,6 @@ alias data='cd ${DATA_ROOT}'
 # Requires ~/data/environment to exist (usually a git repo)
 alias environment='cd ${DATA_ROOT}/environment'
 
-# Requires ~/data/dataworkspace/hoofbeats to exist
-alias hb='cd ${WORKSPACEROOT}/hoofbeats'
-
 # Requires ~/data/reference to exist (usually a git repo)
 alias reference='cd ${DATA_ROOT}/reference'
 
