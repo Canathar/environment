@@ -253,11 +253,24 @@ call plug#end()
 " --                                                                                                                             --
 " =================================================================================================================================
 
-   " Terminal paste
+   " Single-line Terminal paste
    " Highlight from the cursor to the end of the line, yank the text and paste into terminal
    " NOTE: A Terminal MUST be open (This macro ONLY works with VIM8 and above)
    " (For Normal Mode)
+   " 1. <C-V>      -- Enter Visual Block Mode
+   " 2. $y         -- Yank from the cursor position to the end of the line
+   " 3. <C-W><C-W> -- Move to the next window
+   " 4. <C-W>""    -- Paste the yank register to the buffer
    noremap <leader>v <C-V>$y<C-W><C-W><C-W>""
+
+   " Multi-line Terminal paste
+   " Yank the highlighted text and paste into terminal
+   " NOTE: A Terminal MUST be open (This macro ONLY works with VIM8 and above)
+   " (For Normal Mode)
+   " 1. y          -- Yank the highlighted text
+   " 2. <C-W><C-W> -- Move to the next window
+   " 3. <C-W>""    -- Paste the yank register to the buffer
+   noremap <leader>vv y<C-W><C-W><C-W>""
 
 
 

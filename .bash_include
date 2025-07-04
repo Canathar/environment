@@ -56,10 +56,6 @@ lightyellow="\[\033[1;33m\]"
 export PS1="${lightgreen}[${cyan}\u${white}@${magenta}\h${lightblue}:\W${lightgreen}]${nocolor}$ "
 
 
-# Set background color
-printf %b '\e]11;#000000\a'
-
-
 
 # =================================================================================================================================
 # ==                                                          History                                                            ==
