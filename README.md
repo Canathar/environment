@@ -3,9 +3,11 @@
 ### Description
 All my current config files  
 
-### Overview
+<br/>
 
-#### Bash Startup Files
+### Bash Overview
+
+#### Startup Files
 There are several [startup files](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html) that configure the operation of bash from the moment it is invoked.  
 
 <br/>
@@ -22,6 +24,13 @@ From GNU:
 > When an interactive login shell exits, or a non-interactive login shell
 > executes the exit builtin command, Bash reads and executes commands from
 > the file ~/.bash_logout, if it exists. 
+
+| Name | Description |
+|-----|-----|
+| .bash_profile | Customized to point to the .bashrc file |
+| .bash_login | This file is not customized at this time |
+| .profile | This file is not customized at this time |
+| .bash_logout| This file is not customized at this time |
 
 <br/>
 
@@ -40,10 +49,6 @@ From GNU:
 
 | Name | Description |
 |-----|-----|
-| .bash_profile | Customized to point to the .bashrc file |
-| .bash_login | This file is not customized at this time |
-| .profile | This file is not customized at this time |
-| .bash_logout| This file is not customized at this time |
 | .bashrc | Sets the path, sources all other configuration files |
 | .bashrc.d | Directory containing additional project specific customizations |
 
@@ -52,7 +57,7 @@ From GNU:
 #### Bash Supporting Files
 The startup files tend to get very long and unwieldly over time. In order to combat this, there are several supporting files that are used (sourced) to group shell functionality and keep it from being directly in one of the startup files.   
 
-| File Name | Description |
+| Name | Description |
 |-----|-----|
 | .bash_aliases | File containing all the directory/command/function shortcuts |
 | .bash_include | File containing all the prompt/history/terminal configuration |
