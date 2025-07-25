@@ -64,11 +64,32 @@ The startup files tend to get very long and unwieldly over time. In order to com
 
 <br/>
 
+### Vim Overview
+From GitHub:
+> Vim is a greatly improved version of the good old UNIX editor Vi. Many new
+> features have been added: multi-level undo, syntax highlighting, command
+> line history, on-line help, spell checking, filename completion,
+> block operations, script language, etc.
+> There is also a Graphical User Interface (GUI) available. 
+
+<br/>
+
+#### Startup File
+Vim can be [customized](https://vimhelp.org/usr_05.txt.html#usr_05.txt) with shortcuts, commands, and other settings via the .vimrc file that is read during vim initialization.
+
+<br/>
+
 ### Reference
 
 [Bash (Unix shell) - Wikipedia](https://en.wikipedia.org/wiki/Bash_(Unix_shell))  
 [Bash - GNU Project - Free Software Foundation](https://www.gnu.org/software/bash/)  
 [Bash Reference Manual - HTML](https://www.gnu.org/software/bash/manual/html_node/index.html)  
+
+<br/>
+
+[Vim (text editor - Wikipedia)](https://en.wikipedia.org/wiki/Vim_(text_editor))  
+[Vim - Home](https://www.vim.org/)  
+[Vim - Github](https://github.com/vim)  
 
 ---
 This document was made following [Basic Syntax | Markdown Guide](https://www.markdownguide.org/basic-syntax/) and [Extended Syntax | Markdown Guide](https://www.markdownguide.org/extended-syntax/)
