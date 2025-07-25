@@ -20,7 +20,7 @@ From GNU:
 
 
 #### Bash Supporting Files
-The startup files tend to get very long and unwieldly over time. In order to combat this, there are several supporting files taht are used (sourced) to group shell functionality and keep it from being directly in one of the startup files.   
+The startup files tend to get very long and unwieldly over time. In order to combat this, there are several supporting files that are used (sourced) to group shell functionality and keep it from being directly in one of the startup files.   
 
 | File Name | Description |
 |-----|-----|
@@ -30,9 +30,9 @@ The startup files tend to get very long and unwieldly over time. In order to com
 
 ### Reference
 
-[Bash (Unix shell) - Wikipedia](https://en.wikipedia.org/wiki/Bash_(Unix_shell))
-[Bash - GNU Project - Free Software Foundation](https://www.gnu.org/software/bash/)
-[Bash Reference Manual - HTML](https://www.gnu.org/software/bash/manual/html_node/index.html)
+[Bash (Unix shell) - Wikipedia](https://en.wikipedia.org/wiki/Bash_(Unix_shell))  
+[Bash - GNU Project - Free Software Foundation](https://www.gnu.org/software/bash/)  
+[Bash Reference Manual - HTML](https://www.gnu.org/software/bash/manual/html_node/index.html)  
 
 ---
 This document was made following [Basic Syntax | Markdown Guide](https://www.markdownguide.org/basic-syntax/) and [Extended Syntax | Markdown Guide](https://www.markdownguide.org/extended-syntax/)
