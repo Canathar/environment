@@ -1,0 +1,122 @@
+#         _ _        _   _        _ _           _
+#    __ _(_) |_ __ _| |_| |_ _ __(_) |__  _   _| |_ ___  ___
+#   / _` | | __/ _` | __| __| '__| | '_ \| | | | __/ _ \/ __|
+#  | (_| | | || (_| | |_| |_| |  | | |_) | |_| | ||  __/\__ \
+# (_)__, |_|\__\__,_|\__|\__|_|  |_|_.__/ \__,_|\__\___||___/
+#   |___/
+#
+#   ____                  _   _                  ____         __ _
+#  / ___|__ _ _ __   __ _| |_| |__   __ _ _ __  / ___|  ___  / _| |___      ____ _ _ __ ___
+# | |   / _` | '_ \ / _` | __| '_ \ / _` | '__| \___ \ / _ \| |_| __\ \ /\ / / _` | '__/ _ \
+# | |__| (_| | | | | (_| | |_| | | | (_| | |     ___) | (_) |  _| |_ \ V  V / (_| | | |  __/
+#  \____\__,_|_| |_|\__,_|\__|_| |_|\__,_|_|    |____/ \___/|_|  \__| \_/\_/ \__,_|_|  \___|
+#
+###################################################################################################################################
+#                                                                                                                                 #
+#  Git - .gitattributes Documentation                                                                                             #
+#  ----------------------------------                                                                                             #
+#     https://git-scm.com/docs/gitattributes                                                                                      #
+#                                                                                                                                 #
+#                                                                                                                                 #
+#  A Collection Of .gitattributes Templates                                                                                       #
+#  ----------------------------------------                                                                                       #
+#     https://github.com/gitattributes/gitattributes                                                                              #
+#                                                                                                                                 #
+###################################################################################################################################
+
+# +----------------------------------------------------------------------------------------------------+
+# | Common Attributes -- Canathar Specific                                                             |
+# +----------------------------------------------------------------------------------------------------+
+# Default all files to LF
+*          text=auto
+
+# Windows batch files
+*.bat      text eol=crlf
+
+# Markdown files
+*.md       text diff=markdown
+
+# PNG image files
+*.png      filter=lfs diff=lfs merge=lfs -text
+
+
+
+# +----------------------------------------------------------------------------------------------------+
+# | C++ Attributes                                                                                     |
+# |                                                                                                    |
+# | see: https://github.com/gitattributes/gitattributes/blob/master/C%2B%2B.gitattributes              |
+# +----------------------------------------------------------------------------------------------------+
+
+# Sources
+*.c     text diff=cpp
+*.cc    text diff=cpp
+*.cxx   text diff=cpp
+*.cpp   text diff=cpp
+*.cpi   text diff=cpp
+*.c++   text diff=cpp
+*.hpp   text diff=cpp
+*.h     text diff=cpp
+*.h++   text diff=cpp
+*.hh    text diff=cpp
+
+# Compiled Object files
+*.slo   binary
+*.lo    binary
+*.o     binary
+*.obj   binary
+
+# Precompiled Headers
+*.gch   binary
+*.pch   binary
+
+# Compiled Dynamic libraries
+*.so    binary
+*.dylib binary
+*.dll   binary
+
+# Compiled Static libraries
+*.lai   binary
+*.la    binary
+*.a     binary
+*.lib   binary
+
+# Executables
+*.exe   binary
+*.out   binary
+*.app   binary
+
+
+
+# +----------------------------------------------------------------------------------------------------+
+# | Python Attributes                                                                                  |
+# |                                                                                                    |
+# | see: https://github.com/gitattributes/gitattributes/blob/master/Python.gitattributes               |
+# +----------------------------------------------------------------------------------------------------+
+
+# Source files
+# ============
+*.pxd    text diff=python
+*.py     text diff=python
+*.py3    text diff=python
+*.pyw    text diff=python
+*.pyx    text diff=python
+*.pyz    text diff=python
+*.pyi    text diff=python
+
+# Binary files
+# ============
+*.db     binary
+*.p      binary
+*.pkl    binary
+*.pickle binary
+*.pyc    binary export-ignore
+*.pyo    binary export-ignore
+*.pyd    binary
+
+# Jupyter notebook
+*.ipynb  text eol=lf
+
+# Note: .db, .p, and .pkl files are associated
+# with the python modules ``pickle``, ``dbm.*``,
+# ``shelve``, ``marshal``, ``anydbm``, & ``bsddb``
+# (among others).
