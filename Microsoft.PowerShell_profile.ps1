@@ -12,6 +12,8 @@
 # ║                                 Added header, added reference data                                                             ║
 # ║  1.01.13825.xx (18 May 25) - Development Update {J. Laccone}                                                                   ║
 # ║                                 Added additional aliases                                                                       ║
+# ║  1.02.24925.xx (06 Sep 25) - Development Update {J. Laccone}                                                                   ║
+# ║                                 Corrected several copy/paste errors                                                            ║
 # ║                                                                                                                                ║
 # ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 # ║                                                            Reference                                                           ║
@@ -114,7 +116,7 @@ Set-Alias -Name wks -Value Change-To-Workspace
 # Alias for the command(s) to check a python file for style compliance
 # NOTE: Tool MUST be installed first. Install tool via wheel with the following command(s):
 #          pip install --upgrade pycodestyle
-function Check-Python-Style-Compliance {pycodestyle --ignore E129,E221,W503 --max-line-len-132 $args}
+function Check-Python-Style-Compliance {pycodestyle --ignore E129,E221,W503 --max-line-len=132 $args}
 Set-Alias -Name pf-pcs -Value Check-Python-Style-Compliance
 
 
@@ -129,7 +131,7 @@ Set-Alias -Name pf-pds -Value Check-Python-Docstring-Compliance
 # NOTE: Tool MUST be installed first. Install tool via wheel with the following command(s):
 #          pip install --upgrade pylint
 function Check-Python-Functional-Compliance {pylint --max-line-length=132 --extension-pkg-allow=lxml $args}
-Set-Alias -Name pf-pds -Value Check-Python-Functional-Compliance
+Set-Alias -Name pf-lnt -Value Check-Python-Functional-Compliance
 
 
 
