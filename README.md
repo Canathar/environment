@@ -11,7 +11,8 @@ This software repository contains all my current config files
 
 ## Table Of Contents
 
-[TOC]
+So there SHOULD be a Table of Contents here, but alas.  
+_It SURE would be nice if GitHub Flavored Markdown (GFM) supported [TOC]_
 
 <br/>
 
