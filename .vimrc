@@ -118,6 +118,7 @@ call plug#end()
 
    syntax on                           " Enable syntax highlighting
    set cursorline                      " Highlight the current line
+   set showcmd                         " Show partial command in the last line of the screen
 
 
 
