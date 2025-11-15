@@ -1,18 +1,37 @@
-## Software Repository: Environment Configuration
-
-### Description
-All my current config files  
+<!-- markdownlint-disable MD033 -->
+# Software Repository: Environment Configuration
 
 <br/>
 
-### Bash Overview
+## Description
 
-#### Startup Files
+This software repository contains all my current config files  
+
+<br/>
+
+## Table Of Contents
+
+[TOC]
+
+<br/>
+
+## 1. Overview
+
+When moving between systems, or configuring a new system, having a repository that contains all the necessary  
+configuration files allows for minimal time to complete setup.
+
+<br/>
+
+## 2. Bash
+
+### 2.1. Startup Files
+
 There are several [startup files](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html) that configure the operation of bash from the moment it is invoked.  
 
 <br/>
 
-##### Interactive Login Shell
+#### 2.1.1. Interactive Login Shell
+
 From GNU:
 > When Bash is invoked as an interactive login shell, or as a non-interactive
 > shell with the --login option, it first reads and executes commands from the
@@ -23,7 +42,7 @@ From GNU:
 >
 > When an interactive login shell exits, or a non-interactive login shell
 > executes the exit builtin command, Bash reads and executes commands from
-> the file ~/.bash_logout, if it exists. 
+> the file ~/.bash_logout, if it exists.
 
 | Name | Description |
 |-----|-----|
@@ -34,7 +53,8 @@ From GNU:
 
 <br/>
 
-##### Interactive Non-Login Shell
+#### 2.1.2. Interactive Non-Login Shell
+
 From GNU:
 > When Bash runs as an interactive shell that is not a login shell, it reads
 > and executes commands from ~/.bashrc, if that file exists. The --norc option
@@ -42,10 +62,12 @@ From GNU:
 > instead of ~/.bashrc.
 >
 > So, typically, your ~/.bash_profile contains the line
-> ```
+>
+> ```bash
 > if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 > ```
-> after (or before) any login-specific initializations. 
+>
+> after (or before) any login-specific initializations.
 
 | Name | Description |
 |-----|-----|
@@ -54,8 +76,11 @@ From GNU:
 
 <br/>
 
-#### Bash Supporting Files
-The startup files tend to get very long and unwieldly over time. In order to combat this, there are several supporting files that are used (sourced) to group shell functionality and keep it from being directly in one of the startup files.   
+### 2.2. Supporting Files
+
+The startup files tend to get very long and unwieldly over time. In order to combat this, there are several  
+supporting files that are used (sourced) to group shell functionality and keep it from being directly in  
+one of the startup files.
 
 | Name | Description |
 |-----|-----|
@@ -64,22 +89,26 @@ The startup files tend to get very long and unwieldly over time. In order to com
 
 <br/>
 
-### Vim Overview
-From GitHub:
-> Vim is a greatly improved version of the good old UNIX editor Vi. Many new
-> features have been added: multi-level undo, syntax highlighting, command
-> line history, on-line help, spell checking, filename completion,
-> block operations, script language, etc.
-> There is also a Graphical User Interface (GUI) available. 
+## 3. Vim
+
+From GitHub:  
+> Vim is a greatly improved version of the good old UNIX editor Vi. Many new  
+> features have been added: multi-level undo, syntax highlighting, command  
+> line history, on-line help, spell checking, filename completion,  
+> block operations, script language, etc.  
+> There is also a Graphical User Interface (GUI) available.
 
 <br/>
 
-#### Startup File
-Vim can be [customized](https://vimhelp.org/usr_05.txt.html#usr_05.txt) with shortcuts, commands, and other settings via the .vimrc file that is read during vim initialization.
+### 3.1. Startup File (.vimrc)
+
+Vim can be [customized](https://vimhelp.org/usr_05.txt.html#usr_05.txt) with shortcuts, commands, and other settings  
+via the .vimrc file that is read during vim initialization.
 
 <br/>
+<br/>
 
-### Reference
+## Reference
 
 [Bash (Unix shell) - Wikipedia](https://en.wikipedia.org/wiki/Bash_(Unix_shell))  
 [Bash - GNU Project - Free Software Foundation](https://www.gnu.org/software/bash/)  
