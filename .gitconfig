@@ -74,8 +74,8 @@
    # Multi-Line Short                -- abv commit hash --    ------------------ relative auth date ------------------  -- ref names -- -nl-    ---- subject ----  ----- author name -----  -nl-
    lgmls-fmt = log --format=format:'%C(bold blue)%h%Creset - %C(bold cyan)(auth: %C(bold green)%ar%C(bold cyan))%Creset%C(auto)%d%Creset%n     %C(white)%s%Creset %C(dim white) - %an%Creset%n'
 
-   # Multi-Line Long                -- abv commit hash --    --------------- RFC2822 auth date / relative auth date ---------------  -- ref names -- -nl-    ---- subject ----  ----- author name -----  -nl-
-   lg2l-fmt = log --format=format:'%C(bold blue)%h%Creset - %C(bold cyan)(auth: %aD%Creset -  %C(bold green)%ar%C(bold cyan))%Creset%C(auto)%d%Creset%n     %C(white)%s%Creset %C(dim white) - %an%Creset%n'
+   # Multi-Line Long                 -- abv commit hash --    --------------- RFC2822 auth date / relative auth date ---------------  -- ref names -- -nl-    ---- subject ----  ----- author name -----  -nl-
+   lgmll-fmt = log --format=format:'%C(bold blue)%h%Creset - %C(bold cyan)(auth: %aD%Creset -  %C(bold green)%ar%C(bold cyan))%Creset%C(auto)%d%Creset%n     %C(white)%s%Creset %C(dim white) - %an%Creset%n'
 
 
    # ====== Logging Aliases
