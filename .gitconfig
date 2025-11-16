@@ -7,6 +7,10 @@
 #
 [alias]
 
+   # ==============================================================================================================================
+   # --                                                   Checkout Aliases                                                       --
+   # ==============================================================================================================================
+
    # Master Checkout Aliases
    main = checkout main
    master = checkout master
@@ -14,9 +18,11 @@
    # Development Checkout Aliases
    devel = checkout development
 
+   # Integration Checkout Aliases
+   int = checkout integration
 
    # Release Checkout Aliases
-
+   prod = checkout production
 
    # Bugfix Checkout Aliases
 
@@ -24,10 +30,20 @@
    # Feature Checkout Aliases
 
 
+
+   # ==============================================================================================================================
+   # --                                                   Command Aliases                                                        --
+   # ==============================================================================================================================
+
    # Command Aliases
    br = !"git branch"
    st = !"git status"
 
+
+
+   # ==============================================================================================================================
+   # --                                                     Diff Aliases                                                         --
+   # ==============================================================================================================================
 
    # Diff Between Detail (Diff Aliases)
    dbddev  = !"git diff devel..."
@@ -38,37 +54,72 @@
    dbmast  = !"git diff --name-only master..."
 
 
-   # Logging Aliases
-   lg   = log --oneline --graph --decorate --all
-   lg1  = !"git lg1-fmt --graph --abbrev-commit --decorate --all"
-   lg2  = !"git lg2-fmt --graph --abbrev-commit --decorate --all"
-   lg1l = !"git lg1l-fmt --graph --abbrev-commit --decorate --all"
-   lg2l = !"git lg2l-fmt --graph --abbrev-commit --decorate --all"
 
+   # ==============================================================================================================================
+   # --                                                   Logging Aliases                                                        --
+   # ==============================================================================================================================
 
    # ===== Logging Format Strings =====
-   # See: man git log (search for format:<string>
+   # See: man git log (search for format:<string> and search for PRETTY)
 
-   # L1 Fmt (Single Line Short)    -- abv commit hash --    ------------------ relative auth date ------------------   ---- subject ----  ----- author name -----   -- ref names --
-   lg1-fmt = log --format=format:'%C(bold blue)%h%Creset - %C(bold cyan)(auth: %C(bold green)%ar%C(bold cyan))%Creset %C(white)%s%Creset %C(dim white) - %an%Creset%C(auto)%d%Creset'
+   # Single Line Minimal               -- abv commit hash --  ---- subject ----  ----- author name -----   -- ref names --
+   lgslm-fmt = log --format=format:'%C(bold blue)%h%Creset - %C(white)%s%Creset %C(dim white) - %an%Creset%C(auto)%d%Creset'
 
-   # L1l Fmt (Single Line Long)     -- abv commit hash --    --------------- RFC2822 auth date / relative auth date ---------------   ---- subject ----  ----- author name -----   -- ref names --
-   lg1l-fmt = log --format=format:'%C(bold blue)%h%Creset - %C(bold cyan)(auth: %aD%Creset -  %C(bold green)%ar%C(bold cyan))%Creset %C(white)%s%Creset %C(dim white) - %an%Creset%C(auto)%d%Creset'
+   # Single Line Short               -- abv commit hash --    ------------------ relative auth date ------------------   ---- subject ----  ----- author name -----   -- ref names --
+   lgsls-fmt = log --format=format:'%C(bold blue)%h%Creset - %C(bold cyan)(auth: %C(bold green)%ar%C(bold cyan))%Creset %C(white)%s%Creset %C(dim white) - %an%Creset%C(auto)%d%Creset'
 
-   # L2 Fmt (Multi-Line Short)     -- abv commit hash --    ------------------ relative auth date ------------------  -- ref names -- -nl-    ---- subject ----  ----- author name -----  -nl-
-   lg2-fmt = log --format=format:'%C(bold blue)%h%Creset - %C(bold cyan)(auth: %C(bold green)%ar%C(bold cyan))%Creset%C(auto)%d%Creset%n     %C(white)%s%Creset %C(dim white) - %an%Creset%n'
+   # Single Line Long                -- abv commit hash --    --------------- RFC2822 auth date / relative auth date ---------------   ---- subject ----  ----- author name -----   -- ref names --
+   lgsll-fmt = log --format=format:'%C(bold blue)%h%Creset - %C(bold cyan)(auth: %aD%Creset -  %C(bold green)%ar%C(bold cyan))%Creset %C(white)%s%Creset %C(dim white) - %an%Creset%C(auto)%d%Creset'
 
-   # L2l Fmt (Multi-Line Long)      -- abv commit hash --    --------------- RFC2822 auth date / relative auth date ---------------  -- ref names -- -nl-    ---- subject ----  ----- author name -----  -nl-
+   # Multi-Line Short                -- abv commit hash --    ------------------ relative auth date ------------------  -- ref names -- -nl-    ---- subject ----  ----- author name -----  -nl-
+   lgmls-fmt = log --format=format:'%C(bold blue)%h%Creset - %C(bold cyan)(auth: %C(bold green)%ar%C(bold cyan))%Creset%C(auto)%d%Creset%n     %C(white)%s%Creset %C(dim white) - %an%Creset%n'
+
+   # Multi-Line Long                -- abv commit hash --    --------------- RFC2822 auth date / relative auth date ---------------  -- ref names -- -nl-    ---- subject ----  ----- author name -----  -nl-
    lg2l-fmt = log --format=format:'%C(bold blue)%h%Creset - %C(bold cyan)(auth: %aD%Creset -  %C(bold green)%ar%C(bold cyan))%Creset%C(auto)%d%Creset%n     %C(white)%s%Creset %C(dim white) - %an%Creset%n'
-   
-   
-   # ===== File Tracking Aliases =====
+
+
+   # ====== Logging Aliases
+   lgslm = !"git lgslm-fmt --decorate"
+   lgsls = !"git lgsls-fmt --graph --decorate --all"
+   lgsll = !"git lgsll-fmt --graph --decorate --all"
+   lgmls = !"git lgmls-fmt --graph --decorate --all"
+   lgmll = !"git lgmll-fmt --graph --decorate --all"
+
+
+
+   # ==============================================================================================================================
+   # --                                                File Tracking Aliases                                                     --
+   # ==============================================================================================================================
 
    # Command To Show What Files Are In The Index, But Updates Are Not Tracked
    trk-ls = !"git ls-files -v . | grep ^S"
 
 
+
+[color]
+
+   interactive = true
+   status = true
+   ui = true
+
+
+
+[core]
+
+   eol = lf
+   safecrlf = true
+   editor = vim
+
+
+
+[diff]
+
+   tool = bc5
+
+
+
 [difftool]
+
    prompt = false
 
 
@@ -81,14 +132,11 @@
    tool = vimdiff
 
 
+
 [user]
+
    # ===== Example Shown Below. Please Change For Your Name/Email =====
    name = Canathar
    email = canathar@gmail.com
 
-
-[color]
-   interactive = true
-   status = true
-   ui = true
 
