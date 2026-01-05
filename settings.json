@@ -1,0 +1,64 @@
+{
+   "editor.detectIndentation": false,
+   "editor.rulers": [{"column": 79, "color": "#ffcc00"}, {"column": 131, "color": "#ffcc00"}],
+   "editor.tabSize": 3,
+   "files.autoSaveWhenNoErrors": true,
+   "files.trimTrailingWhitespace": false,
+   "git.autofetch": true,
+   "pylint.args": [
+      "--max-line-length=132",
+      "--extension-pkg-allow=lxml"
+   ],
+   "remote.downloadExtensionsLocally": true,
+   "security.workspace.trust.untrustedFiles": "open",
+   "terminal.integrated.defaultProfile.linux": "bash",
+   "terminal.integrated.profiles.linux": {
+      "bash": {
+         "path": "bash",
+         "icon": "terminal-bash",
+         "args": ["-l"]
+      },
+      "zsh": {
+         "path": "zsh"
+      },
+      "fish": {
+         "path": "fish"
+      },
+      "tmux": {
+         "path": "tmux",
+         "icon": "terminal-tmux"
+      },
+      "pwsh": {
+         "path": "pwsh",
+         "icon": "terminal-powershell"
+      }
+   },
+   "vim.disableExtension": true,
+   "workbench.colorTheme":"Default Dark Modern",
+   "workbench.editor.wrapTabs": true,
+   "[cpp]": {
+      "editor.semanticHighlighting.enabled": true,
+      "editor.stickyScroll.defaultModel": "foldingProviderModel",
+      "editor.suggest.insertMode": "replace",
+      "editor.tabSize": 3,
+      "editor.wordBasedSuggestions": "off",
+      "files.trimTrailingWhitespace": true
+   },
+   "[json]": {
+      "editor.autoSurround": "never",
+      "editor.quickSuggestions": {
+         "strings": true
+      },
+      "editor.suggest.insertMode": "replace",
+      "files.trimTrailingWhitespace": true
+   },
+   "[python]": {
+      "diffEditor.ignoreTrimWhitespace": false,
+      "editor.autoSurround": "never",
+      "editor.defaultColorDecorators": "auto",
+      "editor.formatOnType": true,
+      "editor.tabSize": 4,
+      "editor.wordBasedSuggestions": "off",
+      "files.trimTrailingWhitespace": true
+   }
+}
